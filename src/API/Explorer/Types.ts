@@ -251,6 +251,24 @@ export interface ListingAsset extends Asset {
   auction: Pick<Auction, "market_contract" | "auction_id">;
 }
 
+export interface SaleLog {
+  log_id: number;
+  name: string;
+  data: any;
+  txid: string;
+  created_at_block: number;
+  created_at_time: number;
+}
+
+export interface AuctionLog {
+  log_id: number;
+  name: string;
+  data: any;
+  txid: string;
+  created_at_block: number;
+  created_at_time: number;
+}
+
 export interface AssetLog {
   log_id: number;
   name: string;

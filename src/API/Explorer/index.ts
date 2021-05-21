@@ -4,6 +4,7 @@ import {
   AssetParams,
   Auction,
   AuctionParams,
+  AuctionLog,
   BidOfferLog,
   BidOfferParams,
   Config,
@@ -16,6 +17,7 @@ import {
   Price,
   PriceParams,
   Sale,
+  SaleLog,
   SaleParams,
   TransferParams,
 } from "./Types";
@@ -62,6 +64,19 @@ export default class ExplorerApi {
     return await this.fetchEndpoint("/v1/sales/" + id, {});
   }
 
+  async getSaleLogs(
+    id: string,
+    page: number = 1,
+    limit: number = 100,
+    order: string = "desc"
+  ): Promise<SaleLog[]> {
+    return await this.fetchEndpoint("/v1/sales/" + id + "/logs", {
+      page,
+      limit,
+      order,
+    });
+  }
+
   async getAuctions(
     options: AuctionParams & { [key: string]: any } = {},
     page: number = 1,
@@ -83,6 +98,19 @@ export default class ExplorerApi {
 
   async getAuction(id: string): Promise<Auction> {
     return await this.fetchEndpoint("/v1/auctions/" + id, {});
+  }
+
+  async getAuctionLogs(
+    id: string,
+    page: number = 1,
+    limit: number = 100,
+    order: string = "desc"
+  ): Promise<AuctionLog[]> {
+    return await this.fetchEndpoint("/v1/auctions/" + id + "/logs", {
+      page,
+      limit,
+      order,
+    });
   }
 
   async getMarketplaces(): Promise<Marketplace[]> {
