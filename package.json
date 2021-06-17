@@ -1,9 +1,10 @@
 {
-  "name": "@timicool/atomicmarket",
-  "description": "js module to fetch data from the atomicmarket contract",
+  "name": "@timicool/ariginalclaim",
+  "description": "js module to fetch data from the ariginalclaim contract",
   "keywords": [
     "atomicmarket",
     "atomicassets",
+    "ariginalclaim",
     "nft",
     "blockchain",
     "eosio",
@@ -12,7 +13,7 @@
   "author": "pink.network",
   "homepage": "https://atomicmarket.io",
   "bugs": {
-    "url": "https://github.com/zhugeliang-and-choupijiang/ariginal-nft-market/issues",
+    "url": "https://github.com/zhugeliang-and-choupijiang/ariginal-nft-claim/issues",
     "email": "xiongxiangquan@gmail.com"
   },
   "license": "MIT",
@@ -45,6 +46,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhugeliang-and-choupijiang/ariginal-nft-market.git"
+    "url": "git+https://github.com/zhugeliang-and-choupijiang/ariginal-nft-claim.git"
   }
 }
